@@ -1,0 +1,55 @@
+.portfolio__hero {
+    background-image: url("/images/pattern.jpg");
+    background-size: cover;
+    background-color: rgba(255,255,255,0.95);
+    background-blend-mode: lighten;
+    min-height: 100vh;
+}
+
+.portfolio__hero--title {
+    margin: 0;
+    .letters {
+        @include title;
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+}
+
+.portfolio__hero--content {
+    margin-top: -20px;
+    .letters {
+        font-size: 0.7em;
+        font-weight: 300;
+        letter-spacing: 0.035em;
+    }
+}
+
+.lineAnimation {
+    font-weight: 900;
+    font-size: 3.5em;
+    
+
+    .text-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 4px;
+        background-color: #000;
+        transform-origin: 0 50%;
+    }
+
+    .line1 {
+        top: 0;
+        left: 0;
+    }
+
+    .letter {
+        opacity: 0;
+    }
+}

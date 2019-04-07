@@ -2,13 +2,17 @@ import React from "react";
 import ReactDOM, { render } from "react-dom";
 import "../styles/styles.scss";
 
-const App = (props) => {
+import { Hero } from "./components/Hero";
+
+const Portfolio = (props) => {
     return (
-        <div>page</div>
+        <div className="portfolio">
+            <Hero />
+        </div>
     );
 }
 
 ReactDOM.render(
-    <App />,
+    <Portfolio />,
     document.querySelector("#portfolio")
 );

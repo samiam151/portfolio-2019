@@ -1,3 +1,7 @@
-body {
-    background-color:#41f474;
-}
+// Globals
+@import "./globals/vars.scss";
+@import "./globals/fonts.scss";
+@import "./globals/layout.scss";
+
+// Sections
+@import "./sections/hero.scss";
