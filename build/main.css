@@ -120,9 +120,9 @@ section {
 .portfolio__projects {
   border-top: 1.5em solid #7dfc75;
   background-color: #333;
-  min-height: 50vh; }
+  padding: 4em 0; }
   .portfolio__projects .portfolio__projects--project {
-    padding: 3em 0;
+    padding: 2em 0 1em;
     color: #eee; }
     .portfolio__projects .portfolio__projects--project .portfolio__project--tags {
       margin-bottom: 0.95em;
@@ -133,17 +133,28 @@ section {
       font-size: 3em;
       text-transform: lowercase;
       letter-spacing: 0.045em; }
+      .portfolio__projects .portfolio__projects--project h3:hover {
+        cursor: pointer;
+        color: #cfcfcf; }
+    .portfolio__projects .portfolio__projects--project .portfolio__project--tags .tag:first-of-type {
+      background-color: #eee; }
     .portfolio__projects .portfolio__projects--project .portfolio__project--content {
-      background-color: #7dfc75;
+      overflow: hidden;
+      border-width: 0;
       height: 0;
-      padding: 0;
-      color: #333;
-      transition: height 0.25s ease-in-out, padding 0.25s ease-in-out; }
+      opacity: 0;
+      color: #eee;
+      border-top: 0.5em solid #7dfc75;
+      border-bottom: 0.5em solid #7dfc75;
+      border-radius: 20px;
+      margin: 2em 0;
+      transition: height 0.45s cubic-bezier(1, 0, 0, 1) 0.45s, opacity 0.45s cubic-bezier(1, 0, 0, 1), border 0.45s cubic-bezier(0.19, 1, 0.22, 1); }
       .portfolio__projects .portfolio__projects--project .portfolio__project--content[aria-expanded="true"] {
-        padding: 2em 0;
-        height: 10em;
+        height: 40em;
         opacity: 1;
-        transition: height 0.25s ease-in-out, padding 0.25s ease-in-out; }
+        transition: height 0.45s cubic-bezier(1, 0, 0, 1), opacity 0.45s cubic-bezier(1, 0, 0, 1) 0.45s, border 0.45s cubic-bezier(0.19, 1, 0.22, 1) 0.45s; }
+      .portfolio__projects .portfolio__projects--project .portfolio__project--content .content {
+        padding: 2em 0; }
 
 .tag {
   background-color: #7dfc75;
@@ -157,4 +168,6 @@ section {
   font-weight: 700;
   color: #333;
   font-size: 0.8em; }
+  .tag.white {
+    background-color: #eee; }
 

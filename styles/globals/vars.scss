@@ -3,6 +3,14 @@ $black: #333;
 $green: #7dfc75;
 $white: #eee;
 
+// Easings
+$easeInOutExpo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$easeOutExpo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
 @mixin section_top_border($color) {
     border-top: 1.5em solid $color;
+}
+
+@mixin animation($property, $time: 0.45s, $easing: $easeInOutExpo, $delay: 0) {
+    transition: $property $animation_time $easing;
 }
