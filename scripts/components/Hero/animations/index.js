@@ -1,11 +1,11 @@
 import anime from "animejs";
 
-export const lineAnimation = function(id, target, delay=0) {
+export const lineAnimation = function(id, target, delay = 0) {
     const cssClass = ".lineAnimation--" + id;
     let lettersWidth = target.getBoundingClientRect().width;
-    
+
     return anime.timeline(
-        { loop: false }
+            { loop: false }
         )
         .add({
             targets: `${cssClass} .line`,
@@ -19,7 +19,7 @@ export const lineAnimation = function(id, target, delay=0) {
             targets: `${cssClass} .line`,
             translateX: [0, lettersWidth + 20],
             easing: "easeOutExpo",
-            duration: 700,
+            duration: 500,
             delay: 0
         }).add({
             targets: `${cssClass} .letter`,
@@ -28,7 +28,7 @@ export const lineAnimation = function(id, target, delay=0) {
             duration: 400,
             offset: '-=0',
             delay: function (el, i) {
-                return 36 * (i + 1)
+                return 32 * (i + 1)
             }
         }).add({
             targets: `${cssClass} .line`,

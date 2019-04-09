@@ -1,0 +1,40 @@
+.portfolio__projects {
+    @include section_top_border($green);
+    background-color: $black;
+    min-height: 50vh;
+
+    .portfolio__projects--project {
+        padding: 3em 0;
+        color: $white;
+
+        .portfolio__project--tags {
+            margin-bottom: 0.95em;
+            margin-top: 0.95em;
+        }
+
+        h3 {
+            @include title_font;
+            display: inline-block;
+            font-size: 3em;
+            text-transform: lowercase;
+            letter-spacing: 0.045em;
+        }
+
+        .portfolio__project--content {
+            $animation_time: 0.25s;
+
+            background-color: $green;
+            height: 0;
+            padding: 0;
+            color: $black;
+            transition: height $animation_time ease-in-out, padding $animation_time ease-in-out;
+            
+            &[aria-expanded="true"] {
+                padding: 2em 0;
+                height: 10em;
+                opacity: 1;
+                transition: height $animation_time ease-in-out, padding $animation_time ease-in-out;
+            }
+        }
+    }
+}

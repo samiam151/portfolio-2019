@@ -1,0 +1,8 @@
+// Colors
+$black: #333;
+$green: #7dfc75;
+$white: #eee;
+
+@mixin section_top_border($color) {
+    border-top: 1.5em solid $color;
+}

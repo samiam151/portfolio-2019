@@ -1,52 +1,160 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400|Raleway:800);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  font-family: 'Lato', sans-serif; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #333; }
 
 body {
   margin: 0; }
 
 .container {
   max-width: 1080px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+section {
+  padding: 2em 0; }
+
+.lineAnimation .text-wrapper {
+  position: relative;
+  display: inline-block; }
+
+.lineAnimation .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #7dfc75;
+  transform-origin: 0 50%; }
+
+.lineAnimation .line1 {
+  top: 0;
+  left: 0; }
+
+.lineAnimation .letter {
+  opacity: 0; }
 
 .portfolio__hero {
-  background-image: url("/images/pattern.jpg");
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0.95);
-  background-blend-mode: lighten;
-  min-height: 100vh; }
-
-.portfolio__hero--title {
-  margin: 0; }
-  .portfolio__hero--title .letters {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.4em;
-    font-weight: 700; }
-
-.portfolio__hero--content {
-  margin-top: -20px; }
-  .portfolio__hero--content .letters {
-    font-size: 0.7em;
-    font-weight: 300;
-    letter-spacing: 0.035em; }
-
-.lineAnimation {
-  font-weight: 900;
-  font-size: 3.5em; }
-  .lineAnimation .text-wrapper {
-    position: relative;
-    display: inline-block; }
-  .lineAnimation .line {
-    opacity: 0;
+  min-height: 90vh;
+  position: relative; }
+  .portfolio__hero::before {
+    content: "";
+    background-image: url("/images/pattern.jpg");
     position: absolute;
-    left: 0;
+    top: 0px;
+    left: 0px;
     height: 100%;
-    width: 4px;
-    background-color: #000;
-    transform-origin: 0 50%; }
-  .lineAnimation .line1 {
-    top: 0;
-    left: 0; }
-  .lineAnimation .letter {
-    opacity: 0; }
+    width: 100%;
+    filter: opacity(10%); }
+  .portfolio__hero .portfolio__hero--container {
+    display: flex;
+    height: 80vh;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center; }
+    .portfolio__hero .portfolio__hero--container .portfolio__hero--title {
+      margin: 0; }
+      .portfolio__hero .portfolio__hero--container .portfolio__hero--title .letters {
+        font-family: 'Raleway', sans-serif;
+        font-size: 5em;
+        font-weight: 700; }
+    .portfolio__hero .portfolio__hero--container .portfolio__hero--content {
+      margin-top: -4px; }
+      .portfolio__hero .portfolio__hero--container .portfolio__hero--content .letters {
+        font-size: 2.1em;
+        font-weight: 300;
+        letter-spacing: 0.035em; }
+
+.portfolio__projects {
+  border-top: 1.5em solid #7dfc75;
+  background-color: #333;
+  min-height: 50vh; }
+  .portfolio__projects .portfolio__projects--project {
+    padding: 3em 0;
+    color: #eee; }
+    .portfolio__projects .portfolio__projects--project .portfolio__project--tags {
+      margin-bottom: 0.95em;
+      margin-top: 0.95em; }
+    .portfolio__projects .portfolio__projects--project h3 {
+      font-family: 'Raleway', sans-serif;
+      display: inline-block;
+      font-size: 3em;
+      text-transform: lowercase;
+      letter-spacing: 0.045em; }
+    .portfolio__projects .portfolio__projects--project .portfolio__project--content {
+      background-color: #7dfc75;
+      height: 0;
+      padding: 0;
+      color: #333;
+      transition: height 0.25s ease-in-out, padding 0.25s ease-in-out; }
+      .portfolio__projects .portfolio__projects--project .portfolio__project--content[aria-expanded="true"] {
+        padding: 2em 0;
+        height: 10em;
+        opacity: 1;
+        transition: height 0.25s ease-in-out, padding 0.25s ease-in-out; }
+
+.tag {
+  background-color: #7dfc75;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-right: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333;
+  font-size: 0.8em; }
 

@@ -10,7 +10,7 @@ export const LineAnimation = ({ name, cssClasses=[], ...props }) => {
 
     useEffect(() => {
         setTimeout(() => {
-            lineAnimation(id, lettersRef.current, props.delay);
+            lineAnimation(id, lettersRef.current, props.delay || 0);
         }, 1000)
     }, []);
 

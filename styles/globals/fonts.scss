@@ -2,7 +2,7 @@
 // @import url('https://fonts.googleapis.com/css?family=Playball|Source+Sans+Pro:400,400i,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Raleway:800');
 
-@mixin title {
+@mixin title_font {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -17,4 +17,6 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: $black;
 }

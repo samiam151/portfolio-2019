@@ -1,14 +1,17 @@
 import React from "react";
-import ReactDOM, { render } from "react-dom";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "../styles/styles.scss";
 
 import { Hero } from "./components/Hero";
+import { Projects } from "./components/Projects";
 
 const Portfolio = (props) => {
     return (
-        <div className="portfolio">
+        <Router>
             <Hero />
-        </div>
+            <Projects />
+        </Router>
     );
 }
 
