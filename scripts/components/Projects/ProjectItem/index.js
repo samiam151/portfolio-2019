@@ -1,23 +1,7 @@
 import React, { useState, useEffect, Fragment} from "react";
 import { Container } from "../../Utilities/Container";
-
-const Tag = ({value}) => {
-    return (
-        <span className="tag">{value}</span>
-    );
-}
-
-const ProjectItemContent = ({show, content, ...props}) => {
-    return (
-        <article aria-expanded={show} className="portfolio__project--content"> 
-            <Container>
-                <div className="content">
-                    { content }
-                </div>
-            </Container>
-        </article>
-    );
-};
+import { Tag } from "./Tag";
+import { ProjectItemContent } from "./ProjectItemContent";
 
 export const ProjectItem = ({data}) => {
     const [show, shouldShow] = useState(false);
