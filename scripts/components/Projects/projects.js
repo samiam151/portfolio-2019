@@ -9,7 +9,7 @@ export const PROJECTS = [
     {
         name: "Sound Mixer",
         for: "side project",
-        tags: ["typescript", "s3", "web audio api"],
+        tags: ["typescript", "express", "s3", "web audio api"],
         "description": "For the audio engineer in you.",
         content: "This is a project"
     },
