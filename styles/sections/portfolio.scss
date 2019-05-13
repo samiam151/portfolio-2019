@@ -3,6 +3,7 @@
     background-color: $black;
     padding: 4em 0;
 
+    color: #fafafa;
 
     .portfolio__projects--project {
         padding: 2em 0 1em;
@@ -13,22 +14,19 @@
             margin-top: 0.95em;
         }
 
-        // header {
-        //     display: flex;
-        //     align-content: center;
-        // }
-
         h3 {
             @include title_font;
             display: inline-block;
-            font-size: 3em;
             text-transform: lowercase;
             letter-spacing: 0.045em;
+            
 
             &:hover {
                 cursor: pointer;
                 color: darken($white, 12%);
             }
+
+            font-size: 15vh;
         }
 
         .portfolio__project--tags {
@@ -38,34 +36,21 @@
         }
 
         .portfolio__project--content {
-            $animation_time: 0.45s;
-            $easing: $easeInOutExpo;
-            overflow: hidden;
-            border-width: 0;
-            height: 0;
-            opacity: 0;
-            color: $white;
-            border-top: 0.5em solid $green;
-            border-bottom: 0.5em solid $green;
-            border-radius: 20px;
-            margin: 2em 0;
-            transition: 
-                height $animation_time $easing $animation_time,
-                opacity $animation_time $easing,
-                border $animation_time $easeOutExpo;
-            
-            &[aria-expanded="true"] {
-                
-                height: 40em;
-                opacity: 1;
-                transition: 
-                    height $animation_time $easing,
-                    opacity $animation_time $easing $animation_time,
-                    border $animation_time $easeOutExpo $animation_time;
+            display: none;
+
+            .portfolio__project--description {
+                font-weight: 300;
             }
 
             .content {
                 padding: 2em 0;
+                font-weight: 300;
+            }
+        }
+
+        .propertyLink {
+            a {
+                color: $green;
             }
         }
     }

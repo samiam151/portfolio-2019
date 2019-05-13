@@ -1,0 +1,53 @@
+.construction {
+    height: 95vh;
+    font-size: 24px;
+
+    h1 {
+        @include title_font;
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    &::before {
+        content: "";
+        background-image: url("/images/pattern.jpg");
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        filter: opacity(10%);
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .container__inner {
+            text-align: center;
+            line-height: 1.55em;
+
+            h1 {
+                position: relative;
+                display: inline-block;
+                padding: 0 0.75em;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -0.5em;
+                    left: 0;
+                    right: 0;
+                    border-bottom: 5px solid $green;
+                }
+            }
+
+            a {
+                color: $black;
+            }
+        }
+    }
+}
