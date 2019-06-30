@@ -20,7 +20,7 @@ export const AboutSection = (props) => {
 
                     <p>As you can see, <b>I love learning</b>.</p>
                     
-                    <p>In between all that, you can often find me on a bicycle, racing for <Tag inline="true">lindsay cars - spokes etc.</Tag> <span className="bicycle">🚴🏿🚴🏿</span></p>
+                    <p>In between all that, you can often find me on a bicycle, racing for <Tag inline="true">lindsay cars - spokes etc.</Tag> race team <span className="bicycle">🚴🏿🚴🏿</span></p>
                 </Container>
             </section>
         </ScrollIn>
