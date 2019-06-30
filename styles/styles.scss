@@ -1,7 +1,9 @@
 // Globals
 @import "./globals/vars.scss";
+@import "./globals/breakpoints.scss";
 @import "./globals/reset.scss";
 @import "./globals/fonts.scss";
+@import "./globals/typography.scss";
 @import "./globals/layout.scss";
 
 // Animations
@@ -11,6 +13,8 @@
 @import "./sections/under_construction.scss";
 @import "./sections/hero.scss";
 @import "./sections/portfolio.scss";
+@import "./sections/about.scss";
+@import "./sections/contact.scss";
 
 // Components
 @import "./components/tag.scss";

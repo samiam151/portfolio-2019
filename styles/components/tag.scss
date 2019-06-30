@@ -12,7 +12,17 @@
     font-size: 0.8em;
     margin-bottom: 12px;
 
+    box-shadow: -4px 5px 1px rgba(0, 0, 0, 0.4);
+
     &.white {
         background-color: $white;
+    }
+
+    &.tag--inline {
+        margin-right: 0;
+        padding: 6px;
+        box-shadow: none;
+        margin-bottom: 0;
+        line-height: 1em;
     }
 }

@@ -1,0 +1,11 @@
+.portfolio__about {
+    p {
+        @include lg {
+            max-width: 85%;
+        }
+    }
+
+    .bicycle {
+        font-size: 1.4em;
+    }
+}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { LineAnimation } from "./LineAnimation";
 import { ScrollIn } from "../Utilities/ScrollIn";
 
 import { Delay } from "../Utilities/Delay";
@@ -13,21 +12,20 @@ export const Hero = (props) => {
                         <h1>Nick Sam</h1>
                     </ScrollIn>
                     <ol>
-                        <Delay ms="750">
+                        <Delay ms="950">
                             <ScrollIn>
                                 <li>
                                     <span>(noun)</span>
-                                    <h2>Frond End Developer</h2>
+                                    <h2 className="text--green">Front End Developer</h2>
                                 </li>
                             </ScrollIn>
                         </Delay>
-                        <Delay ms="1500">
+                        <Delay ms="1600">
                             <ScrollIn>
                                 <li>
-                                    <p>I make front end interfaces, data visualizations, and other niceties. Check out my work below.</p>
+                                    <p>makes front end interfaces, data visualizations, and other niceties. Check out my work below.</p>
 
                                 </li>
-
                             </ScrollIn>
                         </Delay>
                     </ol>

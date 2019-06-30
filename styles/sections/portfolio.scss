@@ -1,9 +1,13 @@
 .portfolio__projects {
     @include section_top_border($green);
-    background-color: $black;
-    padding: 4em 0;
+    // background-color: $black;
+    padding: 2em 0;
 
-    color: #fafafa;
+    @include lg {
+        padding: 6em 0;
+    }
+
+    // color: #fafafa;
 
     .portfolio__projects--project {
         padding: 2em 0 1em;
@@ -14,19 +18,53 @@
             margin-top: 0.95em;
         }
 
-        h3 {
-            @include title_font;
-            display: inline-block;
-            text-transform: lowercase;
-            letter-spacing: 0.045em;
-            
+        header {
+            position: relative;
+            font-size: 15vw;
+            user-select: none;
 
-            &:hover {
-                cursor: pointer;
-                color: darken($white, 12%);
+            @include lg {
+                font-size: 4.5em;
+            }
+            
+            h3 {
+                @include title_font;
+                display: inline-block;
+                text-transform: lowercase;
+                letter-spacing: 0.045em;
+                
+    
+                &:hover {
+                    cursor: pointer;
+                    color: lighten($black, 15%);
+                }
+                
+            }
+            span {
+                font-weight: 700;
+                position: absolute;
+                right: 0;
+                fill: #fafafa;
+
+                @include lg {
+                    font-size: 1.5em;
+                }
+                opacity: 0;
+                transition: 0.35s opacity ease-in-out, 0.25s transform ease-in-out;
+                transform: scale(1);
+            }
+        }
+        &.portfolio__projects--project--active {
+            header span {
+                opacity: 1;
+                transform: scale(200);
+                position: absolute;
+                z-index: 1;
             }
 
-            font-size: 15vh;
+            .portfolio__project--content {
+                opacity: 1;
+            }
         }
 
         .portfolio__project--tags {
@@ -35,7 +73,7 @@
             }
         }
 
-        .portfolio__project--content {
+        article {
             display: none;
 
             .portfolio__project--description {
@@ -48,10 +86,14 @@
             }
         }
 
+        strong {
+            color: $black;
+        }
+
         .propertyLink {
-            a {
-                color: $green;
-            }
+            // a {
+            //     color: $green;
+            // }
         }
     }
 }

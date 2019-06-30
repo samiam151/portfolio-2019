@@ -60,26 +60,81 @@ strong {
 h1, h2, h3 {
   font-family: 'Raleway', sans-serif; }
 
+* {
+  word-wrap: break-all; }
+
+h2 {
+  letter-spacing: 0.025em;
+  font-size: 58px;
+  display: inline-block;
+  padding-bottom: 0.2em;
+  border-bottom: 0.1em solid black;
+  margin: 0.25em 0 0.5em; }
+  @media (min-width: 980px) {
+    h2 {
+      font-size: 104px; } }
+
+h3 {
+  font-size: 46px; }
+  @media (min-width: 980px) {
+    h3 {
+      font-size: 66px; } }
+
+p {
+  margin-bottom: 1em;
+  line-height: 2em; }
+
+a {
+  color: #222; }
+  a:hover {
+    cursor: pointer;
+    color: #484848; }
+
+p, a {
+  font-size: 1.1em; }
+
+b {
+  font-weight: 700; }
+
+.text--black {
+  color: #222; }
+
+.text--green {
+  color: #FBF81F; }
+
+.text--white {
+  color: #eee; }
+
+.text--center {
+  text-align: center; }
+
+.text--left {
+  text-align: left; }
+
+.text--right {
+  text-align: right; }
+
 body {
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
 
 .container {
-  max-width: 1080px;
+  max-width: 1640px;
   margin: 0 auto;
-  padding-left: 1em;
-  padding-right: 1em; }
+  padding-left: 2em;
+  padding-right: 2em; }
+  @media (min-width: 980px) {
+    .container {
+      padding-left: 7.5%;
+      padding-right: 7.5%; } }
 
 section {
-  padding: 2em 0; }
-  section .section--header {
-    position: absolute;
-    top: -62px;
-    font-size: 18vw;
-    opacity: 0.1; }
+  padding: 2em 0;
+  position: relative; }
 
 .property,
 .propertyLink {
-  margin: 12px 0; }
+  margin-bottom: 12px; }
   .property strong,
   .propertyLink strong {
     margin-right: 6px; }
@@ -95,6 +150,15 @@ section {
   left: 0;
   transition: opacity 1s ease-in-out, left 1s ease-in-out; }
 
+.background--black {
+  background-color: #222; }
+
+.background--green {
+  background-color: #FBF81F; }
+
+.background--white {
+  background-color: #eee; }
+
 .lineAnimation .text-wrapper {
   position: relative;
   display: inline-block; }
@@ -105,7 +169,7 @@ section {
   left: 0;
   height: 100%;
   width: 4px;
-  background-color: #5eff54;
+  background-color: #FBF81F;
   transform-origin: 0 50%; }
 
 .lineAnimation .line1 {
@@ -150,17 +214,21 @@ section {
           bottom: -0.5em;
           left: 0;
           right: 0;
-          border-bottom: 5px solid #5eff54; }
+          border-bottom: 5px solid #FBF81F; }
       .construction .container .container__inner a {
         color: #222; }
 
 .portfolio__hero {
-  min-height: 130vh;
   position: relative;
   background-color: #222; }
+  .portfolio__hero h2 {
+    border: none;
+    display: block; }
   .portfolio__hero .portfolio__hero--container {
-    height: 80vh;
-    margin-top: 10vh; }
+    min-height: 60vh; }
+    @media (min-width: 980px) {
+      .portfolio__hero .portfolio__hero--container {
+        margin-top: 10vh; } }
     .portfolio__hero .portfolio__hero--container .portfolio__hero--title {
       margin: 0; }
       .portfolio__hero .portfolio__hero--container .portfolio__hero--title .letters {
@@ -177,74 +245,133 @@ section {
 .portfolio__hero {
   color: #fafafa; }
   .portfolio__hero h1 {
-    font-size: 11vw;
+    font-size: 54px;
     text-transform: lowercase;
     letter-spacing: 3px;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
-    border-top: 12px solid #5eff54;
+    border-top: 12px solid #FBF81F;
     padding-top: 0.4em; }
+    @media (min-width: 980px) {
+      .portfolio__hero h1 {
+        font-size: 11vw; } }
   .portfolio__hero h2 {
     font-size: 5vw;
     margin-top: 2.5vh;
     font-family: 'Raleway', sans-serif;
-    color: #5eff54;
     text-transform: lowercase;
-    letter-spacing: 4px; }
+    letter-spacing: 2px; }
   .portfolio__hero p {
-    font-size: 6vh;
+    font-size: 6vw;
     margin-top: 4.5vh;
     line-height: 1.3em;
     letter-spacing: 0.5px; }
+    @media (min-width: 980px) {
+      .portfolio__hero p {
+        font-size: 2em; } }
   .portfolio__hero ol {
     margin-top: 16px;
     margin-left: -8px;
     list-style-position: inherit;
     list-style-type: upper-roman;
     letter-spacing: 0.3px; }
+    @media (min-width: 980px) {
+      .portfolio__hero ol {
+        max-width: 80%; } }
     .portfolio__hero ol li {
       padding-left: 12px; }
       .portfolio__hero ol li span {
         letter-spacing: 2px;
-        font-size: 3vh;
         font-weight: 700;
         position: relative;
         font-style: italic; }
 
 .portfolio__projects {
-  border-top: 1.5em solid #5eff54;
-  background-color: #222;
-  padding: 4em 0;
-  color: #fafafa; }
+  border-top: 1.5em solid #FBF81F;
+  padding: 2em 0; }
+  @media (min-width: 980px) {
+    .portfolio__projects {
+      padding: 6em 0; } }
   .portfolio__projects .portfolio__projects--project {
     padding: 2em 0 1em;
     color: #eee; }
     .portfolio__projects .portfolio__projects--project .portfolio__project--tags {
       margin-bottom: 0.95em;
       margin-top: 0.95em; }
-    .portfolio__projects .portfolio__projects--project h3 {
-      font-family: 'Raleway', sans-serif;
-      display: inline-block;
-      text-transform: lowercase;
-      letter-spacing: 0.045em;
-      font-size: 15vh; }
-      .portfolio__projects .portfolio__projects--project h3:hover {
-        cursor: pointer;
-        color: #cfcfcf; }
+    .portfolio__projects .portfolio__projects--project header {
+      position: relative;
+      font-size: 15vw;
+      user-select: none; }
+      @media (min-width: 980px) {
+        .portfolio__projects .portfolio__projects--project header {
+          font-size: 4.5em; } }
+      .portfolio__projects .portfolio__projects--project header h3 {
+        font-family: 'Raleway', sans-serif;
+        display: inline-block;
+        text-transform: lowercase;
+        letter-spacing: 0.045em; }
+        .portfolio__projects .portfolio__projects--project header h3:hover {
+          cursor: pointer;
+          color: #484848; }
+      .portfolio__projects .portfolio__projects--project header span {
+        font-weight: 700;
+        position: absolute;
+        right: 0;
+        fill: #fafafa;
+        opacity: 0;
+        transition: 0.35s opacity ease-in-out, 0.25s transform ease-in-out;
+        transform: scale(1); }
+        @media (min-width: 980px) {
+          .portfolio__projects .portfolio__projects--project header span {
+            font-size: 1.5em; } }
+    .portfolio__projects .portfolio__projects--project.portfolio__projects--project--active header span {
+      opacity: 1;
+      transform: scale(200);
+      position: absolute;
+      z-index: 1; }
+    .portfolio__projects .portfolio__projects--project.portfolio__projects--project--active .portfolio__project--content {
+      opacity: 1; }
     .portfolio__projects .portfolio__projects--project .portfolio__project--tags .tag:first-of-type {
       background-color: #eee; }
-    .portfolio__projects .portfolio__projects--project .portfolio__project--content {
+    .portfolio__projects .portfolio__projects--project article {
       display: none; }
-      .portfolio__projects .portfolio__projects--project .portfolio__project--content .portfolio__project--description {
+      .portfolio__projects .portfolio__projects--project article .portfolio__project--description {
         font-weight: 300; }
-      .portfolio__projects .portfolio__projects--project .portfolio__project--content .content {
+      .portfolio__projects .portfolio__projects--project article .content {
         padding: 2em 0;
         font-weight: 300; }
-    .portfolio__projects .portfolio__projects--project .propertyLink a {
-      color: #5eff54; }
+    .portfolio__projects .portfolio__projects--project strong {
+      color: #222; }
+
+@media (min-width: 980px) {
+  .portfolio__about p {
+    max-width: 85%; } }
+
+.portfolio__about .bicycle {
+  font-size: 1.4em; }
+
+.portfolio__contact p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em; }
+  @media (min-width: 980px) {
+    .portfolio__contact p {
+      font-size: 1.7em;
+      max-width: 85%; } }
+
+.portfolio__contact .portfolio__contact--links svg {
+  font-size: 3em;
+  margin-right: 0.55em; }
+  @media (min-width: 980px) {
+    .portfolio__contact .portfolio__contact--links svg {
+      margin-right: 0.75em; } }
+
+.portfolio__contact .tag {
+  line-height: 1em;
+  background-color: #333;
+  color: #eee; }
 
 .tag {
-  background-color: #5eff54;
+  background-color: #FBF81F;
   border-radius: 3px;
   padding: 6px 12px;
   margin-right: 1em;
@@ -255,7 +382,14 @@ section {
   font-weight: 700;
   color: #222;
   font-size: 0.8em;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  box-shadow: -4px 5px 1px rgba(0, 0, 0, 0.4); }
   .tag.white {
     background-color: #eee; }
+  .tag.tag--inline {
+    margin-right: 0;
+    padding: 6px;
+    box-shadow: none;
+    margin-bottom: 0;
+    line-height: 1em; }
 

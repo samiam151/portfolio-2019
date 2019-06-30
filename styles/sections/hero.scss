@@ -1,26 +1,20 @@
 .portfolio__hero {
-    // background-image: url("/images/pattern.jpg");
-    // background-size: cover;
-    // background-color: rgba(255,255,255,0.95);
-    // background-blend-mode: lighten;
-    min-height: 130vh;
+    // min-height: 130vh;
     position: relative;
     background-color: #222;
 
-    // &::before {
-    //     content: "";
-    //     background-image: url("/images/pattern.jpg");
-    //     position: absolute;
-    //     top: 0px;
-    //     left: 0px;
-    //     height: 100%;
-    //     width: 100%;
-    //     filter: opacity(10%);
-    // }
+    h2 {
+        border: none;
+        display: block;
+    }
+
     .portfolio__hero--container {
-        // display: flex;
-        height: 80vh;
-        margin-top: 10vh;
+        min-height: 60vh;
+
+        @include lg {
+            margin-top: 10vh;
+            // min-height: 80vh;
+        }
 
         .portfolio__hero--title {
             margin: 0;
@@ -47,31 +41,40 @@
 .portfolio__hero {
     color: #fafafa;
 
+
+
     h1 {
-        font-size: 11vw;
+        font-size: 54px;
         text-transform: lowercase;
         letter-spacing: 3px;
         font-weight: 700;
         font-family: 'Raleway', sans-serif;
-
-        border-top: 12px solid #5eff54;
-    padding-top: 0.4em;
+        
+        border-top: 12px solid $green;
+        padding-top: 0.4em;
+        
+        @include lg {
+            font-size: 11vw;
+        }
     }
 
     h2 {
         font-size: 5vw;
         margin-top: 2.5vh;
         font-family: 'Raleway', sans-serif;
-        color: #5eff54;
         text-transform: lowercase;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
     }
 
     p {
-        font-size: 6vh;
+        font-size: 6vw;
         margin-top: 4.5vh;
         line-height: 1.3em;
         letter-spacing: 0.5px;
+
+        @include lg {
+            font-size: 2em;
+        };
     }
 
     ol {
@@ -81,13 +84,17 @@
         list-style-type: upper-roman;
         letter-spacing: 0.3px;
 
+        @include lg {
+            max-width: 80%;
+        }
+
         li {
             padding-left: 12px;
 
             span {
 
                 letter-spacing: 2px;
-                font-size: 3vh;
+                // font-size: 3vh;
                 font-weight: 700;
                 position: relative;
                 font-style: italic;

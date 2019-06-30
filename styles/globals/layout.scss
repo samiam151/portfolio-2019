@@ -1,31 +1,29 @@
 
 body {
-    // background-color:#41f474;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 1080px;
+    max-width: 1640px;
     margin: 0 auto;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    @include lg {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
 }
 
 section {
     padding: 2em 0;
-    // position: relative;
-
-    .section--header {
-        position: absolute;
-        top: -62px;
-        font-size: 18vw;
-        opacity: 0.1;
-    }
+    position: relative;
 }
 
 .property,
 .propertyLink {
-    margin: 12px 0;
+    margin-bottom: 12px;
 
     strong {
         margin-right: 6px;
@@ -44,3 +42,13 @@ section {
     transition: opacity 1s ease-in-out, left 1s ease-in-out;
   }
   
+  
+.background--black {
+    background-color: $black;
+}
+.background--green {
+    background-color: $green;
+}
+.background--white {
+    background-color: $white;
+}
